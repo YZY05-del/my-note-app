@@ -85,8 +85,8 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 
-const router = useRouter();
-const errorMessage = ref<string>("");
+//const router = useRouter();
+//const errorMessage = ref<string>("");
 const form = {
   email: "",
   password: "",
