@@ -5,7 +5,7 @@
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
       <img
         class="mx-auto h-24 w-auto"
-        src="/powersync_logo.png"
+        //src="/powersync_logo.png"
         alt="Your Company"
       />
       <h2
