@@ -49,13 +49,13 @@
               type="checkbox"
               class="mr-2 h-4 w-4 text-blue-500 rounded"
               @change="updateTodo(index)"
-              :checked="todo.completed === 1"
+              :checked="todo.is_completed === 1"
             />
             <div
-              :class="{ 'line-through': todo.completed }"
+              :class="{ 'line-through': todo.is_completed }"
               class="text-lg text-gray-800"
             >
-              {{ todo.description }}
+              {{ todo.task }}
             </div>
           </div>
           <button
@@ -107,7 +107,7 @@ const addTodo = async () => {
       todos.value.push({
         id: data[0].id,          // 使用数据库给的ID
         task: newTodo.value,
-        is_complete: false,
+        is_completed: false,
       });
       
       newTodo.value = "";  // 清空输入框
@@ -120,7 +120,7 @@ const addTodo = async () => {
   }
 };
 const updateTodo = async (index: number) => {
-  todos.value[index].completed = todos.value[index].completed === 1 ? 0 : 1;
+  todos.value[index].is_completed = todos.value[index].is_completed === 1 ? 0 : 1;
 };
 
 const removeTodo = (index: number) => {
